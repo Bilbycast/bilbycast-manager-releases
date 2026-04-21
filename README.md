@@ -52,15 +52,12 @@ bilbycast-manager-<version>/
 
 Complete installation, TLS, and configuration documentation is published at [`https://bilbycast.com/getting-started`](https://bilbycast.com/getting-started).
 
-## Commercial enquiries
+## Enquiries
 
-- **Licensing and commercial contact**: `commercial@softsidetech.com`
 - **General enquiries**: `contact@bilbycast.com`
-- **Privacy enquiries**: `privacy@bilbycast.com`
-- **Security issues**: coordinate disclosure via `security@bilbycast.com`
 
 ## Source code availability
 
-The bilbycast-manager source code is proprietary. Access to source is provided to commercial licensees under negotiated terms; contact `commercial@softsidetech.com` to discuss source-availability options for your deployment.
+The bilbycast-manager source code is proprietary. Access to source is provided to commercial licensees under negotiated terms; contact `contact@bilbycast.com` to discuss source-availability options for your deployment.
 
 Related open-source projects in the Bilbycast suite — bilbycast-edge, bilbycast-relay, bilbycast-srt, bilbycast-rist, bilbycast-libsrt-rs, bilbycast-fdk-aac-rs, bilbycast-ffmpeg-video-rs, bilbycast-bonding — are published under open-source licences at [`https://github.com/Bilbycast`](https://github.com/Bilbycast).

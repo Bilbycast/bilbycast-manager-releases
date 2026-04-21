@@ -113,6 +113,53 @@ or intellectual-property right in the Software passes to Licensee under
 this Agreement. All rights not expressly granted are reserved by
 Licensor.
 
+3.4. **Community Licence (free of charge).** In addition to, or in
+place of, any licence granted under Section 3.1, Licensor grants
+Licensee a perpetual, non-exclusive, non-transferable, non-
+sublicensable, royalty-free **Community Licence** to install and use
+the Software without a paid Order or Licence Key, provided that:
+
+   (a) Licensee's use does not exceed **ten (10) Managed Nodes** in
+       total across all instances of the Software operated by or for
+       Licensee;
+
+   (b) Licensee's use is limited to Licensee's own broadcast
+       operations, including operations performed on behalf of
+       Licensee's clients where Licensee (and not a third party)
+       operates the Software;
+
+   (c) Licensee's use does not include any activity restricted under
+       Section 4 — including, for the avoidance of doubt, operating
+       the Software as a hosted, managed, or software-as-a-service
+       offering to third parties (Section 4.4) or embedding the
+       Software in a third-party-facing appliance, turnkey product,
+       or other solution (Section 4.5);
+
+   (d) Licensee complies with all other terms of this Agreement,
+       including Section 4 (Restrictions), Section 5 (Licence Keys
+       and enforcement), and Section 6 (Audit and compliance
+       verification); and
+
+   (e) Licensor has not terminated the Community Licence under
+       Section 12.
+
+The Community Licence is provided **without fees, without Support,
+without any service-level commitment, and without warranty beyond
+the limited warranty in Section 13**. Licensor has no obligation to
+make Updates available to users of the Community Licence. For the
+purposes of Sections 3.2 and 10, the Community Licence has no
+applicable Order; references in this Agreement to the "Term" as
+applied to a Community Licence mean the period during which
+Licensee's use conforms to this Section 3.4.
+
+Licensor may, on ninety (90) days' prior written notice (including
+by posting a revised Agreement at `https://bilbycast.com/eula`), vary
+the Community Licence terms — including the Node Limit and the scope
+of permitted use — for future Effective Dates. For a Community
+Licence already in effect on the change date, the terms in force at
+its Effective Date continue for an additional twelve (12) months
+before any revised terms apply.
+
 ## 4. Restrictions
 
 Licensee must not, and must not permit any third party to:
