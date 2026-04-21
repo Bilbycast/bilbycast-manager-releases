@@ -1,0 +1,59 @@
+bilbycast-manager
+=================
+
+Copyright (c) 2024-2026 Softside Tech Pty Ltd. All rights reserved.
+
+Licensed under the bilbycast-manager End-User Licence Agreement (EULA).
+See LICENSE, or https://bilbycast.com/eula.
+
+This product includes third-party open-source components. Those
+components are licensed to Licensee under their respective open-source
+licences, which remain unaffected by the proprietary terms of the EULA
+(see EULA §8, "Third-party components").
+
+Bundled third-party components
+------------------------------
+
+bilbycast-manager is built with the Rust ecosystem. Key runtime
+dependencies include:
+
+| Component                              | Licence                            |
+|----------------------------------------|-------------------------------------|
+| Axum (web framework)                   | MIT                                 |
+| Tokio (async runtime)                  | MIT                                 |
+| SQLx (database)                        | MIT / Apache-2.0                    |
+| SQLite (embedded database)             | Public Domain                       |
+| serde / serde_json                     | MIT / Apache-2.0                    |
+| Argon2 (password hashing)              | MIT / Apache-2.0                    |
+| jsonwebtoken (JWT)                     | MIT                                 |
+| AES-GCM / ChaCha20-Poly1305 (crypto)   | Apache-2.0 / MIT                    |
+| Ed25519-dalek (licence keys)           | BSD-3-Clause                        |
+| totp-rs (TOTP / MFA)                   | MIT                                 |
+| openidconnect (SSO)                    | MIT                                 |
+| reqwest / hyper / rustls               | Apache-2.0 / MIT / ISC              |
+| tracing / tracing-subscriber (logging) | MIT                                 |
+| clap (CLI)                             | MIT / Apache-2.0                    |
+| chrono (time)                          | MIT / Apache-2.0                    |
+| uuid                                   | MIT / Apache-2.0                    |
+| qrcode (MFA QR generation)             | MIT / Apache-2.0                    |
+
+A comprehensive machine-readable inventory of every Rust dependency
+(and its transitive dependencies) with exact versions and licences is
+reproducible from the source tree with `cargo tree` / `cargo license`
+and is available to commercial licensees on request.
+
+Static frontend assets
+----------------------
+
+The bilbycast-manager web UI bundles Tailwind CSS (MIT) utility classes
+and no runtime third-party JavaScript frameworks.
+
+Source code availability
+------------------------
+
+The complete corresponding source code for this binary is proprietary
+and not published publicly. Commercial licensees may request source
+access under the terms of their Order — contact `commercial@softsidetech.com`.
+
+This notice is not legal advice. Consult a qualified IP attorney for
+your specific deployment.

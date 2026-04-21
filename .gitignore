@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Editor temp files
+*.swp
+*.swo
+*~
+
+# Local release artefacts (releases are uploaded to GitHub Releases, not committed)
+*.tar.gz
+*.tar.gz.sha256
+*.zip
