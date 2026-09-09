@@ -16,6 +16,17 @@ This repository hosts the **official binary releases only** — the source is pr
 - **Real-time observability** — per-flow bitrate, loss, latency, PTP lock state, NMOS IS-04/05/08 status, and live video thumbnails (one per flow, refreshed every 10 seconds).
 - **Structured events and alarms** — every port conflict, bind failure, authentication event, or protocol anomaly is emitted as a categorised event with severity and drill-down detail.
 - **Driver-aware integration** — native control of `bilbycast-edge` and `bilbycast-relay`, plus out-of-band management of third-party broadcast devices (Appear X units today, more gateways planned) under the same UI and event model.
+- **Live switcher** — Take / Preview crosspoints, preset pages, and one-click preset activation across every managed node.
+- **Visual Flow Editor** — draw a unit's whole configuration on a canvas and deploy it; **master graphs** put several units on one canvas with the cross-unit transport wired between them.
+- **Node Bus Matrix** — three-pane crosspoint authoring of a node's elementary-stream bus, with click-to-wire and drag-and-drop.
+- **Multiviewer walls** — lay out a mosaic wall (drag / resize / snap / z-order, templates, salvo save + recall), route tiles, and compile the wall into a real flow on a node that advertises a compositor. A lighter manager-assembled thumbnail grid is available on any node.
+- **Replay and multi-cam sync groups** — per-flow JKL scrubbing, mark in/out, tagged clips, and sync groups that fan record / mark / synchronised playback across every camera in a group at once.
+- **DVR sessions and a viewer portal** — schedule and run DVR sessions, mint per-viewer grants, and manage portal users and their entitlements; playback is served by a `bilbycast-relay` in its viewer-distribution role (WHEP and LL-HLS/CMAF).
+- **Routines** — save a named, ordered list of actions spanning any number of nodes (start / stop / restart a flow, activate a switcher preset, play a replay clip, arm or disarm continuous recording) and fire it with one click, on a cron schedule, at a one-shot time, or off an event — with per-schedule pause and skip-next.
+- **Alignment groups** — mint and push the shared anchor that lets two edges carrying the same feed emit it in step, so a downstream switcher can cut between them.
+- **Address pools** — global, group, and zone pools of multicast addresses and ports, with allocations, reservations and exclusions, so a flow's addressing comes from a governed range instead of an operator's memory.
+- **Remote binary upgrade** — roll a new edge / gateway build out to one node or every node in a group, with signed manifests verified on the node before anything is downloaded.
+- **Multi-instance HA** — several managers against one Postgres, with `promote`, `rejoin`, and graceful-drain `upgrade` CLI verbs for failover and rolling restarts.
 - **Enterprise-ready auth** — argon2id local auth, TOTP MFA, licensed OIDC SSO (Okta / Azure AD / Keycloak / Google Workspace), role-based access control, per-node access scopes, audit logs.
 - **Encrypted at rest** — node credentials, AI keys, tunnel keys, TOTP secrets, and recovery codes sit under AES-256-GCM envelope encryption keyed to a per-deployment master key. One-command master-key rotation, full encrypted backup / restore.
 - **TLS out of the box** — ACME / Let's Encrypt autoprovisioning, file-based certs, or a behind-proxy mode. Cert fingerprint pinning on the edge/relay clients.
@@ -89,7 +100,7 @@ Each tarball contains:
 ```
 bilbycast-manager-<version>/
   bilbycast-manager        # binary (static musl)
-  migrations/              # SQLite migrations (auto-applied on startup)
+  migrations-pg/           # Postgres migrations (also embedded in the binary, applied on connect)
   config/default.toml      # default configuration
 ```
 
@@ -99,6 +110,7 @@ Complete installation, TLS, and configuration documentation is published at [`ht
 
 - Linux x86_64 (any modern distribution — musl build, no glibc version dependency)
 - ~200 MB disk, ~100 MB RAM at idle; memory scales with connected-node count
+- A reachable **PostgreSQL** server (Postgres 18 is what we develop and test against) — the manager applies its own migrations on first connect
 - Open TCP port for the web UI and WebSocket (default `8443`); optional port `80` if ACME is enabled
 
 Edges and relays managed by bilbycast-manager run on the same hardware-class envelope — see [`https://github.com/Bilbycast/bilbycast-edge`](https://github.com/Bilbycast/bilbycast-edge) for the edge / relay side.
